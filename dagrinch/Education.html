@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="date.css">
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+<h2>EDUCATION</h2>
+
+<form id="educationForm">
+    <label for="university">UNIVERSITY OF</label><br>
+    <input type="text" id="university" name="university" value="LIMPOPO" required><br>
+    
+    <label for="high_school">HIGH SCHOOL</label><br>
+    <input type="text" id="high_school" name="high_school" value="ST AUGUSTINE RESIDENTIAL SCHOOL" required><br>
+    
+    <label for="highest_grade_passed">HIGHEST GRADE</label><br>
+    <input type="number" id="highest_grade_passed" name="highest_grade_passed" value="12" required><br>
+    
+    <label for="degree">DEGREE</label><br>
+    <input type="text" id="degree" name="degree" value="BSC MATHEMATICAL SCIE" required><br>
+    
+    <input type="hidden" id="user_id" name="user_id" value="1"> <!-- Example user_id, adjust as needed -->
+    
+    <br><button type="submit">Submit</button>
+</form>
+
+<br><a href="coverpage.html"><button>BACK</button></a>
+<div class="background-image"></div>
+
+<script>
+    document.getElementById('educationForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        // Simulating data submission
+        const userId = document.getElementById('user_id').value;
+        const university = document.getElementById('university').value;
+        const highSchool = document.getElementById('high_school').value;
+        const highestGradePassed = document.getElementById('highest_grade_passed').value;
+        const degree = document.getElementById('degree').value;
+
+        // Simulate a successful submission (you can add your logic here)
+        alert('Record created successfully:\n' +
+              'User ID: ' + userId + '\n' +
+              'University: ' + university + '\n' +
+              'High School: ' + highSchool + '\n' +
+              'Highest Grade: ' + highestGradePassed + '\n' +
+              'Degree: ' + degree);
+        
+        // You can clear the form or redirect as needed
+        // this.reset(); // Uncomment to clear the form
+        // window.location.href = 'another_page.html'; // Uncomment to redirect
+    });
+</script>
+</body>
+</html>
